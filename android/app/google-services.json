@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690063818780",
+    "project_id": "sgv-others-projects-to-learn",
+    "storage_bucket": "sgv-others-projects-to-learn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690063818780:android:e687836ce7d9be58c25fd9",
+        "android_client_info": {
+          "package_name": "br.com.sgvsolutions.job_timer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690063818780-oi7pv0stac8mfji8tm72g9q2r1ubblh5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWD2JRTg0XjOJLJWe5db941gRUnBLto3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690063818780-oi7pv0stac8mfji8tm72g9q2r1ubblh5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
