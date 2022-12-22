@@ -1,16 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class LoginPageAndroid extends StatelessWidget {
-  const LoginPageAndroid({super.key});
+class LoginPageIos extends StatelessWidget {
+  const LoginPageIos({super.key});
 
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context)
         .size; // retorna o tamanho de tela de um dispositivo
 
-    return Scaffold(
-      body: Container(
+    return CupertinoPageScaffold(
+      child: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [

@@ -1,38 +1,46 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class SplashPageIos extends StatefulWidget {
+  const SplashPageIos({super.key});
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<SplashPageIos> createState() => _SplashPageIosState();
 }
 
-class _MainPageState extends State<MainPage> {
-  int _count = 0;
+class _SplashPageIosState extends State<SplashPageIos> {
+  // initState, define o estado inicial da aplicação
+  @override
+  void initState() {
+    super.initState();
+    // é um listener, ou seja, caso haja alguma alteração na conta do usuário a app irá sabe e tomará algumas ações.
+    // se logado vai para home senão vai para o login
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        Modular.to.navigate('/login');
+      } else {
+        Modular.to.navigate('/home');
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       // Uncomment to change the background color
       // backgroundColor: CupertinoColors.systemPink,
-      navigationBar: const CupertinoNavigationBar(
-        middle: Text('CupertinoPageScaffold Sample'),
-      ),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Center(
-              child: Text('You have pressed the button $_count times.'),
-            ),
-            const SizedBox(height: 20.0),
-            Center(
-              child: CupertinoButton.filled(
-                onPressed: () => setState(() => _count++),
-                child: const Icon(CupertinoIcons.add),
-              ),
-            ),
-          ],
+      child: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0XFF0092B9),
+              Color(0XFF0167B2),
+            ],
+          ),
+        ),
+        child: Center(
+          child: Image.asset("assets/images/logo.png"),
         ),
       ),
     );

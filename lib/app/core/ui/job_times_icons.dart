@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/JobTimesIcons.ttf
 ///
-/// 
+///
 /// * Elusive, Copyright (C) 2013 by Aristeides Stathopoulos
 ///         Author:    Aristeides Stathopoulos
 ///         License:   SIL (http://scripts.sil.org/OFL)
@@ -29,7 +29,10 @@ class JobTimesIcons {
   static const _kFontFam = 'JobTimesIcons';
   static const String? _kFontPkg = null;
 
-  static const IconData ok_circled = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData plus_circled = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData angle_double_right = IconData(0xf101, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData okCircled =
+      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData plusCircled =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData angleDoubleRight =
+      IconData(0xf101, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
