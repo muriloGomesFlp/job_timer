@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'controller/login_controller.dart';
+
 class LoginPageAndroid extends StatelessWidget {
-  const LoginPageAndroid({super.key});
+  final LoginController controller;
+
+  const LoginPageAndroid({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +39,9 @@ class LoginPageAndroid extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.grey[200],
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.singIn();
+                  },
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

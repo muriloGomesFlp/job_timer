@@ -2,8 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'controller/login_controller.dart';
+
 class LoginPageIos extends StatelessWidget {
-  const LoginPageIos({super.key});
+  final LoginController controller;
+
+  const LoginPageIos({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +40,9 @@ class LoginPageIos extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.grey[200],
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.singIn();
+                  },
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

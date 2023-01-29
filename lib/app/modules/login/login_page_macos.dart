@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:macos_ui/macos_ui.dart';
 
+import 'controller/login_controller.dart';
+
 class LoginPageMacOs extends StatelessWidget {
-  const LoginPageMacOs({super.key});
+  final LoginController controller;
+
+  const LoginPageMacOs({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +43,9 @@ class LoginPageMacOs extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.grey[200],
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          controller.singIn();
+                        },
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
